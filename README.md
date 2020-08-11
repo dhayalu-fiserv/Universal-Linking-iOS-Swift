@@ -1,3 +1,3 @@
-# DeepLinking-iOS-Swift
+# iOS DeepLinking Using Swift
 
-![Linking](https://user-images.githubusercontent.com/22928861/89915503-118aff00-dc14-11ea-8bac-1f3684b66bc2.gif)
+![Linking](https://user-images.githubusercontent.com/22928861/89915919-96761880-dc14-11ea-9d6d-833fb4149d95.gif)
