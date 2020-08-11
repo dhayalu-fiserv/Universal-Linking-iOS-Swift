@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pNe-na-tk9">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home Screen-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AppLinking" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Universal Linking" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pAS-RX-meG">
+                                <rect key="frame" x="111.5" y="459" width="191.5" height="32.5"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q67-tU-vfx">
+                                <rect key="frame" x="20" y="760" width="374" height="45"/>
+                                <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="32"/>
+                                <state key="normal" title="Continue"/>
+                                <connections>
+                                    <segue destination="8Id-SZ-fIk" kind="show" id="EGC-aa-TNY"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="q67-tU-vfx" secondAttribute="trailing" constant="20" id="5iw-CK-4UK"/>
+                            <constraint firstItem="q67-tU-vfx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="8bW-A8-9do"/>
+                            <constraint firstItem="pAS-RX-meG" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="QaI-ex-XXB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="q67-tU-vfx" secondAttribute="bottom" constant="57" id="Y4s-lb-TcE"/>
+                            <constraint firstItem="pAS-RX-meG" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="n32-Ta-BQX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Home Screen" id="TyE-bq-dCY"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="633" y="94"/>
+        </scene>
+        <!--Custom View-->
+        <scene sceneID="Yet-Nz-YiK">
+            <objects>
+                <viewController storyboardIdentifier="CustomViewController" id="8Id-SZ-fIk" customClass="CustomViewController" customModule="AppLinking" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aOK-dW-LhM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.crop.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="m6o-J5-Tka">
+                                <rect key="frame" x="113.5" y="104.5" width="187" height="186"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="187" id="EIs-Ot-Lsg"/>
+                                    <constraint firstAttribute="width" secondItem="m6o-J5-Tka" secondAttribute="height" id="RvL-eC-ccQ"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="DZv-kx-0Cd">
+                                <rect key="frame" x="16" y="355" width="382" height="128"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gL8-qe-2CW">
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="26"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ywV-QN-hOc">
+                                                <rect key="frame" x="0.0" y="0.0" width="191" height="26"/>
+                                                <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="21"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ih0-Xf-ziY">
+                                                <rect key="frame" x="191" y="0.0" width="191" height="26"/>
+                                                <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="21"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="grT-Qj-HkT">
+                                        <rect key="frame" x="0.0" y="51" width="382" height="26"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Age" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G1s-EK-d5p">
+                                                <rect key="frame" x="0.0" y="0.0" width="191" height="26"/>
+                                                <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="21"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vqX-kO-C7U">
+                                                <rect key="frame" x="191" y="0.0" width="191" height="26"/>
+                                                <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="21"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qku-Ro-P9q">
+                                        <rect key="frame" x="0.0" y="102" width="382" height="26"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gender" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kEO-my-TUJ">
+                                                <rect key="frame" x="0.0" y="0.0" width="191" height="26"/>
+                                                <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="21"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vGA-WZ-dkD">
+                                                <rect key="frame" x="191" y="0.0" width="191" height="26"/>
+                                                <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="21"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="m6o-J5-Tka" firstAttribute="top" secondItem="sMn-yK-i0l" secondAttribute="top" constant="16" id="A94-eb-OWg"/>
+                            <constraint firstItem="sMn-yK-i0l" firstAttribute="trailing" secondItem="DZv-kx-0Cd" secondAttribute="trailing" constant="16" id="VHb-G8-iN9"/>
+                            <constraint firstItem="DZv-kx-0Cd" firstAttribute="leading" secondItem="sMn-yK-i0l" secondAttribute="leading" constant="16" id="asP-cc-VRi"/>
+                            <constraint firstItem="DZv-kx-0Cd" firstAttribute="top" secondItem="m6o-J5-Tka" secondAttribute="bottom" constant="64" id="bTo-UY-9EY"/>
+                            <constraint firstItem="m6o-J5-Tka" firstAttribute="centerX" secondItem="sMn-yK-i0l" secondAttribute="centerX" id="k21-4Q-fMS"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="sMn-yK-i0l"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Custom View" largeTitleDisplayMode="always" id="t5z-gD-WJH">
+                        <barButtonItem key="backBarButtonItem" title="Item" id="3sk-1m-MqA"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="ageLabel" destination="vqX-kO-C7U" id="VXc-uc-k2s"/>
+                        <outlet property="genderLabel" destination="vGA-WZ-dkD" id="Qzc-YP-CPv"/>
+                        <outlet property="imageColor" destination="m6o-J5-Tka" id="wtT-CL-H1D"/>
+                        <outlet property="nameLabel" destination="Ih0-Xf-ziY" id="0Fa-wJ-RaV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q4b-IC-ord" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1440.5797101449277" y="93.75"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="AcB-H8-sd1">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pNe-na-tk9" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="vBC-Hp-LRu">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Mgb-DN-mIg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mcj-k5-zJT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-157.97101449275362" y="93.75"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="person.crop.circle" catalog="system" width="128" height="121"/>
+    </resources>
+</document>
