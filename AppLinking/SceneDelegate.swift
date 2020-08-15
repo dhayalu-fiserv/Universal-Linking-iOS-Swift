@@ -50,24 +50,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     func scene(_ scene: UIScene, continue userActivity: NSUserActivity) {
         guard let weburl = userActivity.webpageURL else { return }
-        let user = queryParameters(from: weburl)
-        print(user)
-        let nav = Navigator(window: self.window ?? UIWindow())
-        nav.goToView(data: user)
-    }
-
-    func queryParameters(from url: URL) -> User {
-        let urlComponents = URLComponents(url: url, resolvingAgainstBaseURL: false)
-        var queryParams = [String: String]()
-        for queryItem: URLQueryItem in (urlComponents?.queryItems)! {
-            if queryItem.value == nil {
-                continue
-            }
-            queryParams[queryItem.name] = queryItem.value
-        }
-        let user = User(name: queryParams["name"] ?? "", age: queryParams["age"] ?? "", gender: queryParams["gender"] ?? "")
         
-        return user
+        let nav = Navigator(window: self.window ?? UIWindow())
+        nav.getURLPath(url: weburl)
+        
+        //let user = queryParameters(from: weburl)
+        //print(user)
+        //nav.goToView(data: user)
     }
     
     func scene(_ scene: UIScene, didUpdate userActivity: NSUserActivity) {
